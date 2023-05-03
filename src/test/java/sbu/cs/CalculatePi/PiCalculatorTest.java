@@ -1,17 +1,17 @@
-package sbu.cs.pi;
+package sbu.cs.CalculatePi;
 
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-class PICalculatorTest {
+class PiCalculatorTest {
 
-    private static PICalculator piCalculator;
+    private static PiCalculator piCalculator;
 
     @BeforeAll
     static void setup() {
-        piCalculator = new PICalculator();
+        piCalculator = new PiCalculator();
     }
 
     @Test

@@ -1,4 +1,4 @@
-package sbu.cs.priority;
+package sbu.cs.PrioritySimulator;
 
 public class WhiteThread extends ColorThread {
 

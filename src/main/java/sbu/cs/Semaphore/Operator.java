@@ -1,4 +1,4 @@
-package sbu.cs.semaphore;
+package sbu.cs.Semaphore;
 
 public class Operator extends Thread {
 

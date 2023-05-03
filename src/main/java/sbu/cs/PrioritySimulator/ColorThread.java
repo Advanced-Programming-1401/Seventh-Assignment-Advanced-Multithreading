@@ -1,4 +1,4 @@
-package sbu.cs.priority;
+package sbu.cs.PrioritySimulator;
 
 public abstract class ColorThread extends Thread {
 

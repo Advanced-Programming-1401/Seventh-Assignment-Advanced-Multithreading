@@ -1,6 +1,6 @@
-package sbu.cs.pi;
+package sbu.cs.CalculatePi;
 
-public class PICalculator {
+public class PiCalculator {
 
     /**
      * Calculate pi and represent it as a BigDecimal object with the given floating point number (digits after . )

@@ -1,4 +1,4 @@
-package sbu.cs.priority;
+package sbu.cs.PrioritySimulator;
 
 import java.util.ArrayList;
 import java.util.List;

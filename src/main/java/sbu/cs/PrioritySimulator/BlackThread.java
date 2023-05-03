@@ -1,8 +1,8 @@
-package sbu.cs.priority;
+package sbu.cs.PrioritySimulator;
 
-public class BlueThread extends ColorThread {
+public class BlackThread extends ColorThread {
 
-    private static final String MESSAGE = "hi finished blacks, hi whites!";
+    private static final String MESSAGE = "hi blues, hi whites!";
 
     void printMessage() {
         super.printMessage(new Message(this.getClass().getName(), getMessage()));

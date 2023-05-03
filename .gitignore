@@ -236,3 +236,6 @@ build/tmp/compileTestJava/previous-compilation-data.bin
 build/test-results/test/TEST-sbu.cs.priority.RunnerTest.xml
 build/reports/tests/test/classes/sbu.cs.priority.RunnerTest.html
 build/reports/tests/test/packages/sbu.cs.priority.html
+build/test-results/test/TEST-sbu.cs.CalculatePi.PiCalculatorTest.xml
+build/reports/tests/test/packages/sbu.cs.CalculatePi.html
+build/reports/tests/test/classes/sbu.cs.CalculatePi.PiCalculatorTest.html
