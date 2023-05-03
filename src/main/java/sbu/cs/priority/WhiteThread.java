@@ -2,7 +2,7 @@ package sbu.cs.priority;
 
 public class WhiteThread extends ColorThread {
 
-    private static final String MESSAGE = "hi back blacks, hi back blues";
+    private static final String MESSAGE = "hi finished blacks, hi finished blues!";
 
     void printMessage() {
         super.printMessage(new Message(this.getClass().getName(), getMessage()));
@@ -15,6 +15,6 @@ public class WhiteThread extends ColorThread {
 
     @Override
     public void run() {
-        // call printMessage
+        // TODO call printMessage
     }
 }

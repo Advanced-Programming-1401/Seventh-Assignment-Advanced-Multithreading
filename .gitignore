@@ -233,3 +233,6 @@ build/test-results/test/binary/results.bin
 build/test-results/test/TEST-sbu.cs.CPU_SimulatorTest.xml
 build/tmp/compileJava/previous-compilation-data.bin
 build/tmp/compileTestJava/previous-compilation-data.bin
+build/test-results/test/TEST-sbu.cs.priority.RunnerTest.xml
+build/reports/tests/test/classes/sbu.cs.priority.RunnerTest.html
+build/reports/tests/test/packages/sbu.cs.priority.html

@@ -11,10 +11,17 @@ public class PICalculator {
      * Create as many classes and threads as you need.
      * Your code must pass all of the test cases provided in the test folder.
 
-     * @param floatingPoint number of digits after floating point
-     * @return pi in string format
+     * @param floatingPoint the exact number of digits after the floating point
+     * @return pi in string format (the string representation of the BigDecimal object)
      */
-    public String calculate(int floatingPoint) {
+
+    public String calculate(int floatingPoint)
+    {
+        // TODO
         return null;
+    }
+
+    public static void main(String[] args) {
+        // Use the main function to test the code yourself
     }
 }
