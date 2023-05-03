@@ -22,6 +22,8 @@ In this assignment, you are given three introductory exercises focused on the ba
    - `Use Interrupts`: Analyze the provided code and add interrupts where a thread must be terminated. Handle each interrupt in its respective thread.
 3. Commit your changes and push your commits to your fork on Github. Create a pull request (assigned to your mentor) to merge your changes to the main branch of your fork on Github.
 
+   * you can find pi with 1000 digits after floating point at https://mathshistory.st-andrews.ac.uk/HistTopics/1000_places/
+
 
 ## Notes
 - You can find unit tests for the first two exercises (`CPU Simulator` and `Find Multiples`). Use these to ensure you've implemented the code correctly.
