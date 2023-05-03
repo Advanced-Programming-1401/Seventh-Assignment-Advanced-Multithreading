@@ -17,7 +17,7 @@ In this assignment, you are given three problems focused on various areas of mul
 2. Complete the following exercises based on the instructions provided:
 
    - `Calculate Pi`: Calculate the value of pi up to 1000 digits after the floating point. Find more instructions in the `PiCalculator` class.
-   - `Priority Simulator`: Manage three different thread types and ensure the order of execution between them is correctly handled.  Find more instructions in the `Runner` class.
+   - `Priority Simulator`: Manage three different thread types and ensure the order of execution between them is correctly handled. Try to use a `CountDownLatch` for this exercise. Find more instructions in the `Runner` class.
    - `Semaphore`: Solve a synchronization problem using a Semaphore that allows 2 threads to enter the critical section.  Find more instructions in the `Controller` class.
 3. Commit your changes and push your commits to your fork on Github. Create a pull request (assigned to your mentor) to merge your changes to the main branch of your fork on Github.
 
