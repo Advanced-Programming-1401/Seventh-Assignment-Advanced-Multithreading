@@ -33,7 +33,7 @@ class PICalculatorTest {
     }
 
     /**
-     * in this scale you should see a difference between multi and single thread
+     * In this scale you should see a difference between multi and single thread
      */
     @Test
     void calculateHard2() {

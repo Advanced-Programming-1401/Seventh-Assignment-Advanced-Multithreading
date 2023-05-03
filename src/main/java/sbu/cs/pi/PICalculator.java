@@ -5,7 +5,7 @@ public class PICalculator {
     /**
      * Calculate pi and represent it as a BigDecimal object with the given floating point number (digits after . )
      * There are several algorithms designed for calculating pi, it's up to you to decide which one to implement.
-     Experiment with a few algorithms to find accurate results.
+     Experiment with different algorithms to find accurate results.
 
      * You must design a multithreaded program to calculate pi. Creating a thread pool is recommended.
      * Create as many classes and threads as you need.
