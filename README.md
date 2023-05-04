@@ -26,7 +26,7 @@ In this assignment, you are given three problems focused on various areas of mul
 - You can find unit tests for the first two exercises (`Calculate Pi` and `Priority Simulator`). Use these to ensure you've implemented the code correctly.
 - You are NOT allowed to use the `Thread.Sleep()` method for the `Priority Simulator` exercise.
 - You are NOT allowed to use any other form of synchronization tool for the `Semaphore` exercise. Only Semaphores may be used.
-- Your report should include on the solution you chose for each exercise (and why you chose it). Try to focus on the `Calculate Pi` exercise and explain the mathematical algorithm(s) you tried in detail.
+- Your report should include details on the solution you chose for each exercise (and why you chose it). Try to focus on the `Calculate Pi` exercise and explain the mathematical algorithm(s) you tried in detail.
 
 
 ## Evaluation
