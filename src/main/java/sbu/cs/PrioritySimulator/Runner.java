@@ -2,6 +2,7 @@ package sbu.cs.PrioritySimulator;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.concurrent.CountDownLatch;
 
 public class Runner {
 
@@ -35,28 +36,40 @@ public class Runner {
 
         // TODO
 
+        CountDownLatch latch = new CountDownLatch(blackCount);
+
         for (int i = 0; i < blackCount; i++) {
-            BlackThread blackThread = new BlackThread();
+            BlackThread blackThread = new BlackThread(latch);
             colorThreads.add(blackThread);
             blackThread.start();
         }
 
+        latch.await();
+
         // TODO
 
+        latch = new CountDownLatch(blueCount);
+
         for (int i = 0; i < blueCount; i++) {
-            BlueThread blueThread = new BlueThread();
+            BlueThread blueThread = new BlueThread(latch);
             colorThreads.add(blueThread);
             blueThread.start();
         }
 
+        latch.await();
+
         // TODO
 
+        latch = new CountDownLatch(whiteCount);
+
+
         for (int i = 0; i < whiteCount; i++) {
-            WhiteThread whiteThread = new WhiteThread();
+            WhiteThread whiteThread = new WhiteThread(latch);
             colorThreads.add(whiteThread);
             whiteThread.start();
         }
 
+        latch.await();
         // TODO
     }
 
@@ -69,6 +82,11 @@ public class Runner {
     }
 
     public static void main(String[] args) {
-        // Use the main function to test the code yourself
+        Runner r = new Runner();
+        try {
+            r.run(3,2,1);
+        } catch (InterruptedException e) {
+            throw new RuntimeException(e);
+        }
     }
 }
