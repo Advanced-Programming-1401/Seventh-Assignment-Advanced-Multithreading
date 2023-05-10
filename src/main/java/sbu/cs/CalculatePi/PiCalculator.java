@@ -1,5 +1,7 @@
 package sbu.cs.CalculatePi;
 
+import java.math.BigDecimal;
+
 public class PiCalculator {
 
     /**
@@ -15,13 +17,19 @@ public class PiCalculator {
      * @return pi in string format (the string representation of the BigDecimal object)
      */
 
-    public String calculate(int floatingPoint)
-    {
-        // TODO
-        return null;
+    public static double calculate(int floatingPoint) {
+        double sum = 0;
+        for (int i = 1; i < 2147483647; i++) {
+            if (i % 2 == 0)
+                sum -= (double) 1 / (2 * i - 1);
+            else
+                sum += (double) 1 / (2 * i - 1);
+        }
+        return 4*(sum);
     }
 
-    public static void main(String[] args) {
+    public static void main (String[]args) {
+        System.out.println(calculate(4));
         // Use the main function to test the code yourself
     }
 }
