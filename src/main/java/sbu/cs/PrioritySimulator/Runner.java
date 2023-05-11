@@ -37,19 +37,19 @@ public class Runner {
         CountDownLatch blueLatch = new CountDownLatch(blueCount);
         CountDownLatch whiteLatch = new CountDownLatch(whiteCount);
         for (int i = 0; i < blackCount; i++) {
-            BlackThread blackThread = new BlackThread();
+            BlackThread blackThread = new BlackThread(blackLatch);
             colorThreads.add(blackThread);
             blackThread.start();
         }
         blackLatch.await();
         for (int i = 0; i < blueCount; i++) {
-            BlueThread blueThread = new BlueThread();
+            BlueThread blueThread = new BlueThread(blueLatch);
             colorThreads.add(blueThread);
             blueThread.start();
         }
         blueLatch.await();
         for (int i = 0; i < whiteCount; i++) {
-            WhiteThread whiteThread = new WhiteThread();
+            WhiteThread whiteThread = new WhiteThread(whiteLatch);
             colorThreads.add(whiteThread);
             whiteThread.start();
         }
