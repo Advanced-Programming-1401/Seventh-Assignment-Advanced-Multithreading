@@ -38,28 +38,35 @@ public class Runner {
         CountDownLatch whiteLatch = new CountDownLatch(whiteCount);
 
         for (int i = 0; i < blackCount; i++) {
-            BlackThread blackThread = new BlackThread();
+            BlackThread blackThread = new BlackThread(blackLatch);
             colorThreads.add(blackThread);
             blackThread.start();
         }
 
-        // TODO
 
         for (int i = 0; i < blueCount; i++) {
-            BlueThread blueThread = new BlueThread();
+
+            blackLatch.await();//make sure that blackThread will execute first
+            BlueThread blueThread = new BlueThread(blueLatch);
             colorThreads.add(blueThread);
             blueThread.start();
         }
 
-        // TODO
+
 
         for (int i = 0; i < whiteCount; i++) {
-            WhiteThread whiteThread = new WhiteThread();
+            blackLatch.await();//make sure that blackThread will execute first
+            blueLatch.await();//make sure that blueThread will execute second
+
+            WhiteThread whiteThread = new WhiteThread(whiteLatch);
             colorThreads.add(whiteThread);
             whiteThread.start();
         }
 
-        // TODO
+        blackLatch.await();//make sure that blackThread will execute first
+        blueLatch.await();//make sure that blueThread will execute second
+        whiteLatch.await();//make sure that whiteThread will execute third
+
     }
 
     synchronized public static void addToList(Message message) {
