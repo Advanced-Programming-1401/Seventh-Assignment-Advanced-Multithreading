@@ -1,9 +1,12 @@
 package sbu.cs.Semaphore;
-
+import  java.util.concurrent.Semaphore;
 public class Operator extends Thread {
+    Semaphore semaphore;
 
-    public Operator(String name) {
+    public Operator(String name,Semaphore semaphore) {
         super(name);
+        this.semaphore=semaphore;
+
     }
 
     @Override
