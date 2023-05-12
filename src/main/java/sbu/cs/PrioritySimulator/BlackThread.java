@@ -1,6 +1,13 @@
 package sbu.cs.PrioritySimulator;
-
+import  java.util.concurrent.CountDownLatch;
 public class BlackThread extends ColorThread {
+    CountDownLatch CDL;
+
+    public BlackThread(CountDownLatch CDL){
+        super();
+        this.CDL = CDL;
+    }
+
 
     private static final String MESSAGE = "hi blues, hi whites!";
 
