@@ -2,6 +2,7 @@ package sbu.cs.PrioritySimulator;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.concurrent.*;
 
 public class Runner {
 
@@ -24,7 +25,7 @@ public class Runner {
 
      * You are allowed to change the existing code in any of the given classes or add your own new code
      to any of them.
-     * Your code must pass all of the test cases provided in the test folder.
+     * Your code must pass all the test cases provided in the test folder.
 
      * @param blackCount    number of black threads
      * @param blueCount     number of blue threads
@@ -32,32 +33,27 @@ public class Runner {
      */
     public void run(int blackCount, int blueCount, int whiteCount) throws InterruptedException {
         List<ColorThread> colorThreads = new ArrayList<>();
-
-        // TODO
-
+        CountDownLatch blackLatch = new CountDownLatch(blackCount);
+        CountDownLatch blueLatch = new CountDownLatch(blueCount);
+        CountDownLatch whiteLatch = new CountDownLatch(whiteCount);
         for (int i = 0; i < blackCount; i++) {
-            BlackThread blackThread = new BlackThread();
+            BlackThread blackThread = new BlackThread(blackLatch);
             colorThreads.add(blackThread);
             blackThread.start();
         }
-
-        // TODO
-
+        blackLatch.await();
         for (int i = 0; i < blueCount; i++) {
-            BlueThread blueThread = new BlueThread();
+            BlueThread blueThread = new BlueThread(blueLatch);
             colorThreads.add(blueThread);
             blueThread.start();
         }
-
-        // TODO
-
+        blueLatch.await();
         for (int i = 0; i < whiteCount; i++) {
-            WhiteThread whiteThread = new WhiteThread();
+            WhiteThread whiteThread = new WhiteThread(whiteLatch);
             colorThreads.add(whiteThread);
             whiteThread.start();
         }
-
-        // TODO
+        whiteLatch.await();
     }
 
     synchronized public static void addToList(Message message) {
@@ -69,6 +65,5 @@ public class Runner {
     }
 
     public static void main(String[] args) {
-        // Use the main function to test the code yourself
     }
 }
